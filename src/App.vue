@@ -1,8 +1,9 @@
 <template>
     <div id="app">
         <Header />
-
-        <Musiclist />
+        <main>
+            <Musiclist />
+        </main>
     </div>
 </template>
 

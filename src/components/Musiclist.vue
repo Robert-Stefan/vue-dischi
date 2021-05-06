@@ -1,7 +1,7 @@
 <template>
     <section class="music">
         <div v-if="!loading">
-            <div v-for="music in musicList" :key="music.id">
+            <div v-for="(music, index) in musicList" :key="index">
                 <Music :info="music" />
             </div>
         </div>
@@ -36,8 +36,8 @@ export default {
             axios
                 .get(this.apiURL)
                 .then(res => {
-                    console.log(res.data);
-                    this.musicList = res.data;
+                    console.log(res.data.response);
+                    this.musicList = res.data.response;
                     this.loading = false;
                 })
                 .catch(err => {
