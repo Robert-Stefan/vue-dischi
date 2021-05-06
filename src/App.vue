@@ -1,9 +1,8 @@
 <template>
     <div id="app">
         <Header />
-        <main>
-            <Musiclist />
-        </main>
+
+        <Musiclist />
     </div>
 </template>
 
@@ -28,6 +27,7 @@ export default {
 
 body {
     font-family: sans-serif;
-    /*background-color: #1d2d3c;*/
+    background-color: #1d2d3c;
+    font-weight: bold;
 }
 </style>

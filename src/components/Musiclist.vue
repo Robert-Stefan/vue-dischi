@@ -1,12 +1,8 @@
 <template>
-    <section class="music">
-        <div v-if="!loading">
-            <div v-for="(music, index) in musicList" :key="index">
-                <Music :info="music" />
-            </div>
-        </div>
-        <div v-else class="loader">Loading...</div>
-    </section>
+    <div v-if="!loading" class="music">
+        <Music v-for="(music, index) in musicList" :key="index" :info="music" />
+    </div>
+    <div v-else class="loading">LOADING ...</div>
 </template>
 
 <script>
@@ -48,4 +44,21 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.music {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 110px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+}
+</style>
