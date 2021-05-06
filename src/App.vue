@@ -2,18 +2,18 @@
     <div id="app">
         <Header />
 
-        <Music />
+        <Musiclist />
     </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue';
-import Music from '@/components/Music.vue';
+import Musiclist from '@/components/Musiclist.vue';
 export default {
     name: 'App',
     components: {
         Header,
-        Music,
+        Musiclist,
     },
 };
 </script>
@@ -27,6 +27,6 @@ export default {
 
 body {
     font-family: sans-serif;
-    background-color: #1d2d3c;
+    /*background-color: #1d2d3c;*/
 }
 </style>
